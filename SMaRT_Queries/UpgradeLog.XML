@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SMaRT">
+</Property><Property Name="Solution File" Value="C:\datamanagement\SSIS_2008\SMaRT\SMaRT.sln">
+</Property><Property Name="Date" Value="October 23, 2014">
+</Property><Property Name="Time" Value="11:39 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SMaRT.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SMaRT.sln" Description="Converted">
+</Event></UpgradeLog>
