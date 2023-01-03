@@ -1,2 +1,2 @@
-# SMaRT_Queries
+# SMaRT
 SMaRT Queries from Larry
