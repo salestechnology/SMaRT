@@ -1,0 +1,875 @@
+<?xml version="1.0"?><DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts" DTS:ExecutableType="MSDTS.Package.1"><DTS:Property DTS:Name="PackageFormatVersion">2</DTS:Property><DTS:Property DTS:Name="VersionComments"></DTS:Property><DTS:Property DTS:Name="CreatorName">WJDOM\rpaisley</DTS:Property><DTS:Property DTS:Name="CreatorComputerName">WSG03YDH1</DTS:Property><DTS:Property DTS:Name="CreationDate" DTS:DataType="7">11/19/2010 12:41:26 PM</DTS:Property><DTS:Property DTS:Name="PackageType">5</DTS:Property><DTS:Property DTS:Name="ProtectionLevel">1</DTS:Property><DTS:Property DTS:Name="MaxConcurrentExecutables">-1</DTS:Property><DTS:Property DTS:Name="PackagePriorityClass">0</DTS:Property><DTS:Property DTS:Name="VersionMajor">1</DTS:Property><DTS:Property DTS:Name="VersionMinor">0</DTS:Property><DTS:Property DTS:Name="VersionBuild">51</DTS:Property><DTS:Property DTS:Name="VersionGUID">{46A656E8-5FC6-4CFE-81E5-5160C87AAD54}</DTS:Property><DTS:Property DTS:Name="EnableConfig">-1</DTS:Property><DTS:Property DTS:Name="CheckpointFileName"></DTS:Property><DTS:Property DTS:Name="SaveCheckpoints">0</DTS:Property><DTS:Property DTS:Name="CheckpointUsage">0</DTS:Property><DTS:Property DTS:Name="SuppressConfigurationWarnings">0</DTS:Property>
+<DTS:ConnectionManager><DTS:Property DTS:Name="DelayValidation">0</DTS:Property><DTS:Property DTS:Name="ObjectName">SMaRT</DTS:Property><DTS:Property DTS:Name="DTSID">{537FB54F-6F23-4E60-9A89-33856AFE413C}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName">OLEDB</DTS:Property><DTS:ObjectData><DTS:ConnectionManager><DTS:Property DTS:Name="Retain">0</DTS:Property><DTS:Property DTS:Name="ConnectionString">Data Source=SRVHGSQLTC59A,1441;Initial Catalog=SMaRT;Provider=SQLNCLI.1;Integrated Security=SSPI;</DTS:Property></DTS:ConnectionManager></DTS:ObjectData></DTS:ConnectionManager>
+<DTS:ConnectionManager><DTS:Property DTS:Name="DelayValidation">0</DTS:Property><DTS:Property DTS:Name="ObjectName">SMTP Connection Manager</DTS:Property><DTS:Property DTS:Name="DTSID">{b44ad321-854c-4a88-9b08-a710e6be60ae}</DTS:Property><DTS:Property DTS:Name="Description">SMTP Connection Manager</DTS:Property><DTS:Property DTS:Name="CreationName">SMTP</DTS:Property><DTS:ObjectData><SmtpConnectionManager ConnectionString="SmtpServer=relay.westjet.priv;UseWindowsAuthentication=True;EnableSsl=False;"/></DTS:ObjectData></DTS:ConnectionManager>
+<DTS:Configuration><DTS:Property DTS:Name="ConfigurationType">1</DTS:Property><DTS:Property DTS:Name="ConfigurationString">J:\SSIS\SMaRT\Email.dtsConfig</DTS:Property><DTS:Property DTS:Name="ConfigurationVariable"></DTS:Property><DTS:Property DTS:Name="ObjectName">Email</DTS:Property><DTS:Property DTS:Name="DTSID">{ACD8508D-7ED3-4DB4-A6DE-602990AFC5D8}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:Configuration>
+<DTS:Configuration><DTS:Property DTS:Name="ConfigurationType">1</DTS:Property><DTS:Property DTS:Name="ConfigurationString">J:\SSIS\SMaRT\SMaRT_ConnectionControl.dtsConfig</DTS:Property><DTS:Property DTS:Name="ConfigurationVariable"></DTS:Property><DTS:Property DTS:Name="ObjectName">SMaRT</DTS:Property><DTS:Property DTS:Name="DTSID">{598279D3-AB15-4E17-BBE2-7D71950BFA5E}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:Configuration>
+<DTS:LogProvider><DTS:Property DTS:Name="ConfigString">SMaRT</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property><DTS:Property DTS:Name="ObjectName">SSIS log provider for SQL Server</DTS:Property><DTS:Property DTS:Name="DTSID">{5ECEFC66-8E79-49DE-AE50-B9D058CC1F4E}</DTS:Property><DTS:Property DTS:Name="Description">Writes log entries for events to a SQL Server database</DTS:Property><DTS:Property DTS:Name="CreationName">DTS.LogProviderSQLServer.1</DTS:Property><DTS:ObjectData><InnerObject/></DTS:ObjectData></DTS:LogProvider>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;TaskHost xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsDataFlowDiagram&gt;&lt;dwd:Layout&gt;&lt;dds&gt;
+  &lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="0" scrolltop="0" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="100" x="36565" y="15875" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="0" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;
+    &lt;font&gt;
+      &lt;ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" /&gt;
+    &lt;/font&gt;
+    &lt;mouseicon&gt;&lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;
+    &lt;/mouseicon&gt;
+  &lt;/diagram&gt;
+  &lt;layoutmanager&gt;&lt;ddsxmlobj /&gt;
+  &lt;/layoutmanager&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="OLE DB Source" left="1045" top="1000" logicalid="4" controlid="1" masterid="0" hint1="0" hint2="0" width="7381" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="00080000d51c00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="{3E660943-2A26-437A-9FD5-FC272C3B69A9}/components/1" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="OLE DB Destination" left="993" top="3513" logicalid="5" controlid="2" masterid="0" hint1="0" hint2="0" width="7487" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobjectstreaminitwrapper binary="000800003f1d00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="{3E660943-2A26-437A-9FD5-FC272C3B69A9}/components/430" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="4336" top="1765" logicalid="6" controlid="3" masterid="0" hint1="0" hint2="0" width="800" height="2248" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;&lt;control&gt;&lt;ddsxmlobj&gt;&lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;&lt;ddsxmlobj&gt;&lt;property name="LogicalObject" value="{3E660943-2A26-437A-9FD5-FC272C3B69A9}/paths/4698" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="1" destid="2" sourceattachpoint="13" destattachpoint="12" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;&lt;point x="4735" y="2164" /&gt;
+      &lt;point x="4735" y="2838" /&gt;
+      &lt;point x="4736" y="2838" /&gt;
+      &lt;point x="4736" y="3513" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;/dwd:DtsDataFlowDiagram&gt;&lt;dwd:DtsComponentDesignerPropertiesList&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;430	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1	DataSourceViewID&lt;/dwd:key&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;430	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:DtsComponentDesignTimeProperty&gt;&lt;dwd:key xsi:type="xsd:string"&gt;1	TableInfoObjectType&lt;/dwd:key&gt;&lt;dwd:value xsi:type="xsd:string"&gt;Table&lt;/dwd:value&gt;&lt;/dwd:DtsComponentDesignTimeProperty&gt;&lt;/dwd:DtsComponentDesignerPropertiesList&gt;&lt;/TaskHost&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{3E660943-2A26-437A-9FD5-FC272C3B69A9}</DTS:Property><DTS:Property DTS:Name="DTSID">{BFC83772-BAE8-45FE-872E-19D491914DEC}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;PipelinePath xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:PathAnnotation&gt;AsNeeded&lt;/dwd:PathAnnotation&gt;&lt;dwd:SourceName&gt;OLE DB Source Output&lt;/dwd:SourceName&gt;&lt;dwd:DestinationName&gt;OLE DB Destination Input&lt;/dwd:DestinationName&gt;&lt;/PipelinePath&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{3E660943-2A26-437A-9FD5-FC272C3B69A9}-4698</DTS:Property><DTS:Property DTS:Name="DTSID">{A8A5E413-1FE1-4F36-A981-82EB815DEAE4}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;ConnectionManager xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DataSourceID&gt;SMaRT&lt;/dwd:DataSourceID&gt;&lt;/ConnectionManager&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{537FB54F-6F23-4E60-9A89-33856AFE413C}</DTS:Property><DTS:Property DTS:Name="DTSID">{4E9E9AAE-01B4-4C75-9204-B9A0B0A1434C}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable>
+<DTS:PackageVariable><DTS:Property DTS:Name="PackageVariableValue" DTS:DataType="8">&lt;Package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0"&gt;&lt;dwd:DtsControlFlowDiagram&gt;&lt;dwd:Layout&gt;&lt;dds&gt;
+  &lt;diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="Microsoft.DataWarehouse.Layout.GraphLayout" defaultlineroute="Microsoft.DataWarehouse.Layout.GraphLayout" version="7" nextobject="21" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-538" scrolltop="1150" gridx="150" gridy="150" marginx="1000" marginy="1000" zoom="100" x="26988" y="17463" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="1" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}"&gt;
+    &lt;font&gt;
+      &lt;ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" /&gt;
+    &lt;/font&gt;
+    &lt;mouseicon&gt;
+      &lt;ddsxmlobjectstreamwrapper binary="6c74000000000000" /&gt;
+    &lt;/mouseicon&gt;
+  &lt;/diagram&gt;
+  &lt;layoutmanager&gt;
+    &lt;ddsxmlobj /&gt;
+  &lt;/layoutmanager&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Execute SQL Task" left="1161" top="4414" logicalid="10" controlid="1" masterid="4" hint1="0" hint2="0" width="6694" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="00080000261a00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{83E7984B-5381-4726-9E8F-448E9A0B8274}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Data Flow Task" left="1161" top="6928" logicalid="11" controlid="2" masterid="4" hint1="0" hint2="0" width="6694" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="00080000261a00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{3E660943-2A26-437A-9FD5-FC272C3B69A9}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Text" left="10175" top="4837" logicalid="12" controlid="3" masterid="0" hint1="0" hint2="0" width="6000" height="1500" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="0002000070170000dc0500000300640000000500008008000080000000002a0001000000900144420100065461686f6d611c005400720075006e00630061007400650020004e006f006e002d00460061007200650043006c0061007300730020005400610062006c00650000000000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj /&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsContainerObjectManagedBridge.1" tooltip="Sequence Container" left="462" top="2150" logicalid="13" controlid="4" masterid="0" hint1="0" hint2="0" width="8272" height="6630" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="0008000050200000e6190000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="Caption" value="Sequence Container" vartype="8" /&gt;
+        &lt;property name="CaptionHeight" value="1164" vartype="3" /&gt;
+        &lt;property name="Collapsed" value="0" vartype="11" /&gt;
+        &lt;property name="CollapsedWidth" value="8193" vartype="3" /&gt;
+        &lt;property name="LogicalObject" value="{EB02D2A6-13B0-4AB4-BE28-0380DCD53B86}" vartype="8" /&gt;
+        &lt;property name="RealHeight" value="0" vartype="3" /&gt;
+        &lt;property name="RealWidth" value="0" vartype="3" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="4109" top="5179" logicalid="14" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="2249" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{F9EA880A-2395-496B-B07D-927AE9FA5577}" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector sourceid="1" destid="2" sourceattachpoint="11" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="4508" y="5578" /&gt;
+      &lt;point x="4508" y="6928" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Send Mail Task" left="1126" top="9702" logicalid="15" controlid="6" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{ba4beb6f-ca15-427e-859b-984ffb4055c8}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="2526" top="8381" logicalid="16" controlid="7" masterid="0" hint1="0" hint2="0" width="822" height="1821" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="255" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{D9F4FA81-CADC-4F5E-821B-8FB2F13F0E40}" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="4" destid="6" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="2948" y="8780" /&gt;
+      &lt;point x="2948" y="9241" /&gt;
+      &lt;point x="2925" y="9241" /&gt;
+      &lt;point x="2925" y="9702" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Send Mail Task" left="5568" top="9700" logicalid="17" controlid="8" masterid="0" hint1="0" hint2="0" width="3598" height="1164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobjectstreaminitwrapper binary="000800000e0e00008c040000" /&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{6ce0125d-fb15-408e-a1ae-d77c942de4a6}" vartype="8" /&gt;
+        &lt;property name="ShowConnectorSource" value="0" vartype="2" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;shape groupshapeid="0" groupnode="0" /&gt;
+  &lt;/ddscontrol&gt;
+  &lt;ddscontrol controlprogid="MSDDS.Polyline" left="5849" top="8381" logicalid="18" controlid="9" masterid="0" hint1="0" hint2="0" width="1918" height="1819" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0"&gt;
+    &lt;control&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;polyline endtypedst="3" endtypesrc="1" usercolor="32768" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/control&gt;
+    &lt;layoutobject&gt;
+      &lt;ddsxmlobj&gt;
+        &lt;property name="LogicalObject" value="{55890989-AC3B-45D0-8574-AA1B45E11DAF}" vartype="8" /&gt;
+        &lt;property name="Virtual" value="0" vartype="11" /&gt;
+        &lt;property name="VisibleAP" value="0" vartype="3" /&gt;
+      &lt;/ddsxmlobj&gt;
+    &lt;/layoutobject&gt;
+    &lt;connector lineroutestyle="Microsoft.DataWarehouse.Layout.GraphLayout" sourceid="4" destid="8" sourceattachpoint="21" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="2" relatedid="0" virtual="0"&gt;
+      &lt;point x="6248" y="8780" /&gt;
+      &lt;point x="6248" y="9240" /&gt;
+      &lt;point x="7367" y="9240" /&gt;
+      &lt;point x="7367" y="9700" /&gt;
+    &lt;/connector&gt;
+  &lt;/ddscontrol&gt;
+&lt;/dds&gt;&lt;/dwd:Layout&gt;&lt;dwd:PersistedViewPortLeft&gt;-538&lt;/dwd:PersistedViewPortLeft&gt;&lt;dwd:PersistedViewPortTop&gt;1150&lt;/dwd:PersistedViewPortTop&gt;&lt;/dwd:DtsControlFlowDiagram&gt;&lt;/Package&gt;</DTS:Property><DTS:Property DTS:Name="Namespace">dts-designer-1.0</DTS:Property><DTS:Property DTS:Name="ObjectName">{97B701F2-B7CF-429E-BC70-138EEE8B8730}</DTS:Property><DTS:Property DTS:Name="DTSID">{3CE5DB5B-2507-42E1-BBF3-432566A2AC95}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PackageVariable><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">1033</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:Variable><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Property DTS:Name="EvaluateAsExpression">0</DTS:Property><DTS:Property DTS:Name="Namespace">User</DTS:Property><DTS:Property DTS:Name="ReadOnly">0</DTS:Property><DTS:Property DTS:Name="RaiseChangedEvent">0</DTS:Property><DTS:VariableValue DTS:DataType="8">jwallace@westjet.com</DTS:VariableValue><DTS:Property DTS:Name="ObjectName">EmailTo</DTS:Property><DTS:Property DTS:Name="DTSID">{5ABF10DF-0E13-4E18-A89E-D994A5C73814}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:Variable>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">1</DTS:Property><DTS:Property DTS:Name="FilterKind">0</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property><DTS:SelectedLogProvider DTS:InstanceID="{5ECEFC66-8E79-49DE-AE50-B9D058CC1F4E}"/></DTS:LoggingOptions>
+<DTS:Executable DTS:ExecutableType="STOCK:SEQUENCE"><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">0</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions>
+<DTS:Executable DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" DTS:ThreadHint="0"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">0</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:Property DTS:Name="ObjectName">Truncate non-FareClass Tables</DTS:Property><DTS:Property DTS:Name="DTSID">{83E7984B-5381-4726-9E8F-448E9A0B8274}</DTS:Property><DTS:Property DTS:Name="Description">Execute SQL Task</DTS:Property><DTS:Property DTS:Name="CreationName">Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><SQLTask:SqlTaskData SQLTask:Connection="{537FB54F-6F23-4E60-9A89-33856AFE413C}" SQLTask:TimeOut="0" SQLTask:IsStoredProc="False" SQLTask:SqlStmtSourceType="DirectInput" SQLTask:SqlStatementSource="Truncate Table [NON-FARE_CLASS_UNFILTERED]&#xA;GO&#xA;&#xA;" SQLTask:ResultType="ResultSetType_None" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask"/></DTS:ObjectData></DTS:Executable>
+<DTS:Executable DTS:ExecutableType="DTS.Pipeline.1"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">0</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:Property DTS:Name="ObjectName">NON-FARE_CLASS_UNFILTERED</DTS:Property><DTS:Property DTS:Name="DTSID">{3E660943-2A26-437A-9FD5-FC272C3B69A9}</DTS:Property><DTS:Property DTS:Name="Description">Data Flow Task</DTS:Property><DTS:Property DTS:Name="CreationName">DTS.Pipeline.1</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><pipeline id="0" name="pipelineXml" description="pipelineXml" defaultBufferMaxRows="10000" engineThreads="5" defaultBufferSize="10485760" BLOBTempStoragePath="" bufferTempStoragePath="" runInOptimizedMode="true">
+<components>
+<component id="1" name="Non-fareClass_Unfiltered QRY" componentClassID="{2C0A8BE5-1EDC-4353-A0EF-B778599C65A0}" description="OLE DB Source" localeId="-1" usesDispositions="true" validateExternalMetadata="True" version="7" pipelineVersion="0" contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7">
+<properties>
+<property id="2" name="CommandTimeout" dataType="System.Int32" state="default" isArray="false" description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">0</property>
+<property id="3" name="OpenRowset" dataType="System.String" state="default" isArray="false" description="Specifies the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">[dbo].[AASTSL]</property>
+<property id="4" name="OpenRowsetVariable" dataType="System.String" state="default" isArray="false" description="Specifies the variable that contains the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="5" name="SqlCommand" dataType="System.String" state="default" isArray="false" description="The SQL command to be executed." typeConverter="" UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" containsID="false" expressionType="None">select 
+[Year],
+[Mon],
+[date],
+[IATA],
+[CorporateProfileID],
+[CID],
+[Company_ID],
+[Promo_Code],
+[Company_Name],
+[Company_Address],
+[Company_City],
+[Company_Province],
+[Company_PostalCode],
+[Company_Phone],
+[Company_EMail],
+[Acct_Type],
+[At_Source_%],
+[Tier_Name],
+[Level],
+[Matrix_Value],
+[Trans_Indicator],
+[Agency Name],
+[Manager],
+[Address],
+[City],
+[Province],
+[PostalCode_Zip],
+[Phone],
+[E-Mail],
+[ODPair],
+[ODSetNumber],
+[Agreement_Type],
+[MarketingCarrier],
+[OperatingCarrier],
+[TicketingCarrier],
+sum([Total PNR]) as [Total PNR],
+sum([Total_CouponGuestCount]) as [Total_CouponGuestCount],
+sum([Total_FlightLegGuestCount]) as [Total_FlightLegGuestCount],
+sum([Total $]) as [Total $],
+sum([Total_DiscountBaseValueCAD]) as [Total_DiscountBaseValueCAD],
+sum([Total_NavInsuranceFuelValueCAD]) as [Total_NavInsuranceFuelValueCAD],
+sum([WS PNR]) as [WS PNR],
+sum([WS_CouponGuestCount]) as [WS_CouponGuestCount],
+sum([WS_FlightLegGuestCount]) as [WS_FlightLegGuestCount],
+sum([WS $]) as [WS $],
+sum([WS_DiscountBaseValueCAD]) as [WS_DiscountBaseValueCAD],
+sum([WS_NavInsuranceFuelValueCAD]) as [WS_NavInsuranceFuelValueCAD],
+sum([Inet PNR]) as [Inet PNR],
+sum([Inet_CouponGuestCount]) as [Inet_CouponGuestCount],
+sum([Inet_FlightLegGuestCount]) as [Inet_FlightLegGuestCount],
+sum([Inet $]) as [Inet $],
+sum([Inet_DiscountBaseValueCAD]) as [Inet_DiscountBaseValueCAD],
+sum([Inet_NavInsuranceFuelValueCAD]) as [Inet_NavInsuranceFuelValueCAD],
+sum([Inet 2 PNR]) as [Inet 2 PNR],
+sum([Inet 2 $]) as [Inet 2 $],
+sum([AM API PNR]) as [AM PNR],
+sum([AM API $]) as [AM $],
+sum([AM FS PNR]) as [AM FS PNR],
+sum([AM FS $]) as [AM FS $],
+sum([Sabre PNR]) as [Sabre PNR],
+sum([Sabre_CouponGuestCount]) as [Sabre_CouponGuestCount],
+sum([Sabre_FlightLegGuestCount]) as [Sabre_FlightLegGuestCount],
+sum([Sabre $]) as [Sabre $],
+sum([Sabre_DiscountBaseValueCAD]) as [Sabre_DiscountBaseValueCAD],
+sum([Sabre_NavInsuranceFuelValueCAD]) as [Sabre_NavInsuranceFuelValueCAD],
+sum([Amadeus PNR]) as [Amadeus PNR],
+sum([Amadeus_CouponGuestCount]) as [Amadeus_CouponGuestCount],
+sum([Amadeus_FlightLegGuestCount]) as [Amadeus_FlightLegGuestCount],
+sum([Amadeus $]) as [Amadeus $],
+sum([Amadeus_DiscountBaseValueCAD]) as [Amadeus_DiscountBaseValueCAD],
+sum([Amadeus_NavInsuranceFuelValueCAD]) as [Amadeus_NavInsuranceFuelValueCAD],
+sum([Galileo PNR]) as [Galileo PNR],
+sum([Galileo_CouponGuestCount]) as [Galileo_CouponGuestCount],
+sum([Galileo_FlightLegGuestCount]) as [Galileo_FlightLegGuestCount],
+sum([Galileo $]) as [Galileo $],
+sum([Galileo_DiscountBaseValueCAD]) as [Galileo_DiscountBaseValueCAD],
+sum([Galileo_NavInsuranceFuelValueCAD]) as [Galileo_NavInsuranceFuelValueCAD],
+sum([Worldspan PNR]) as [Worldspan PNR],
+sum([Worldspan_CouponGuestCount]) as [Worldspan_CouponGuestCount],
+sum([Worldspan_FlightLegGuestCount]) as [Worldspan_FlightLegGuestCount],
+sum([Worldspan $]) as [Worldspan $],
+sum([Worldspan_DiscountBaseValueCAD]) as [Worldspan_DiscountBaseValueCAD],
+sum([Worldspan_NavInsuranceFuelValueCAD]) as [Worldspan_NavInsuranceFuelValueCAD],
+sum([GDS Total PNR]) as [GDS PNR],
+sum([GDS_CouponGuestCount]) as [GDS_CouponGuestCount],
+sum([GDS_FlightLegGuestCount]) as [GDS_FlightLegGuestCount],
+sum([GDS Total $]) as [GDS $],
+sum([GDS_DiscountBaseValueCAD]) as [GDS_DiscountBaseValueCAD],
+sum([GDS_NavInsuranceFuelValueCAD]) as [GDS_NavInsuranceFuelValueCAD],
+sum([BIZ_PNR]) as [BIZ_PNR],
+sum([BIZ_CouponGuestCount]) as [BIZ_CouponGuestCount],
+sum([BIZ_FlightLegGuestCount]) as [BIZ_FlightLegGuestCount],
+sum([BIZ_$]) as [BIZ_$],
+sum([BIZ_DiscountBaseValueCAD]) as [BIZ_DiscountBaseValueCAD],
+sum([BIZ_NavInsuranceFuelValueCAD]) as [BIZ_NavInsuranceFuelValueCAD],
+[CurrencyCode]
+from RAW_Fare_Class_Data_UNFILTERED
+group by
+[Year],
+[Mon],
+[date],
+[IATA],
+[CorporateProfileID],
+[CID],
+[Company_ID],
+[Promo_Code],
+[Company_Name],
+[Company_Address],
+[Company_City],
+[Company_Province],
+[Company_PostalCode],
+[Company_Phone],
+[Company_EMail],
+[Acct_Type],
+[At_Source_%],
+[Tier_Name],
+[Level],
+[Matrix_Value],
+[Trans_Indicator],
+[Agency Name],
+[Manager],
+[Address],
+[City],
+[Province],
+[PostalCode_Zip],
+[Phone],
+[E-Mail],
+[ODPair],
+[ODSetNumber],
+[Agreement_Type],
+[MarketingCarrier],
+[OperatingCarrier],
+[TicketingCarrier],
+[CurrencyCode]</property>
+<property id="6" name="SqlCommandVariable" dataType="System.String" state="default" isArray="false" description="The variable that contains the SQL command to be executed." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="7" name="DefaultCodePage" dataType="System.Int32" state="default" isArray="false" description="Specifies the column code page to use when code page information is unavailable from the data source." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">1252</property>
+<property id="8" name="AlwaysUseDefaultCodePage" dataType="System.Boolean" state="default" isArray="false" description="Forces the use of the DefaultCodePage property value when describing character data." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="9" name="AccessMode" dataType="System.Int32" state="default" isArray="false" description="Specifies the mode used to access the database." typeConverter="AccessMode" UITypeEditor="" containsID="false" expressionType="None">2</property>
+<property id="15" name="ParameterMapping" dataType="System.String" state="default" isArray="false" description="The mappings between the parameters in the SQL command and variables." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property></properties>
+<connections>
+<connection id="10" name="OleDbConnection" description="The OLE DB runtime connection used to access the database." connectionManagerID="{537FB54F-6F23-4E60-9A89-33856AFE413C}"/></connections>
+<outputs>
+<output id="11" name="OLE DB Source Output" description="" exclusionGroup="0" synchronousInputId="0" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="false" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="3346" name="IATA" description="" lineageId="3346" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="3345"/>
+<outputColumn id="4411" name="Year" description="" lineageId="4411" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4410"/>
+<outputColumn id="4414" name="Mon" description="" lineageId="4414" precision="0" scale="0" length="3" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4413"/>
+<outputColumn id="4417" name="date" description="" lineageId="4417" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4416"/>
+<outputColumn id="4420" name="CorporateProfileID" description="" lineageId="4420" precision="0" scale="0" length="20" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4419"/>
+<outputColumn id="4423" name="CID" description="" lineageId="4423" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4422"/>
+<outputColumn id="4426" name="Company_ID" description="" lineageId="4426" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4425"/>
+<outputColumn id="4429" name="Promo_Code" description="" lineageId="4429" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4428"/>
+<outputColumn id="4432" name="Company_Name" description="" lineageId="4432" precision="0" scale="0" length="255" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4431"/>
+<outputColumn id="4435" name="Company_Address" description="" lineageId="4435" precision="0" scale="0" length="129" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4434"/>
+<outputColumn id="4438" name="Company_City" description="" lineageId="4438" precision="0" scale="0" length="30" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4437"/>
+<outputColumn id="4441" name="Company_Province" description="" lineageId="4441" precision="0" scale="0" length="2" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4440"/>
+<outputColumn id="4444" name="Company_PostalCode" description="" lineageId="4444" precision="0" scale="0" length="16" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4443"/>
+<outputColumn id="4447" name="Company_Phone" description="" lineageId="4447" precision="0" scale="0" length="20" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4446"/>
+<outputColumn id="4450" name="Company_EMail" description="" lineageId="4450" precision="0" scale="0" length="255" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4449"/>
+<outputColumn id="4453" name="Acct_Type" description="" lineageId="4453" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4452"/>
+<outputColumn id="4456" name="At_Source_%" description="" lineageId="4456" precision="16" scale="2" length="0" dataType="numeric" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4455"/>
+<outputColumn id="4459" name="Tier_Name" description="" lineageId="4459" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4458"/>
+<outputColumn id="4462" name="Level" description="" lineageId="4462" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4461"/>
+<outputColumn id="4465" name="Matrix_Value" description="" lineageId="4465" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4464"/>
+<outputColumn id="4468" name="Trans_Indicator" description="" lineageId="4468" precision="0" scale="0" length="6" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4467"/>
+<outputColumn id="4471" name="Agency Name" description="" lineageId="4471" precision="0" scale="0" length="75" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4470"/>
+<outputColumn id="4474" name="Manager" description="" lineageId="4474" precision="0" scale="0" length="75" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4473"/>
+<outputColumn id="4477" name="Address" description="" lineageId="4477" precision="0" scale="0" length="120" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4476"/>
+<outputColumn id="4480" name="City" description="" lineageId="4480" precision="0" scale="0" length="75" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4479"/>
+<outputColumn id="4483" name="Province" description="" lineageId="4483" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4482"/>
+<outputColumn id="4486" name="PostalCode_Zip" description="" lineageId="4486" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4485"/>
+<outputColumn id="4489" name="Phone" description="" lineageId="4489" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4488"/>
+<outputColumn id="4492" name="E-Mail" description="" lineageId="4492" precision="0" scale="0" length="120" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4491"/>
+<outputColumn id="4495" name="ODPair" description="" lineageId="4495" precision="0" scale="0" length="6" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4494"/>
+<outputColumn id="4498" name="ODSetNumber" description="" lineageId="4498" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4497"/>
+<outputColumn id="4501" name="Agreement_Type" description="" lineageId="4501" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4500"/>
+<outputColumn id="4507" name="MarketingCarrier" description="" lineageId="4507" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4506"/>
+<outputColumn id="4510" name="OperatingCarrier" description="" lineageId="4510" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4509"/>
+<outputColumn id="4513" name="TicketingCarrier" description="" lineageId="4513" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4512"/>
+<outputColumn id="4516" name="Total PNR" description="" lineageId="4516" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4515"/>
+<outputColumn id="4519" name="Total_CouponGuestCount" description="" lineageId="4519" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4518"/>
+<outputColumn id="4522" name="Total_FlightLegGuestCount" description="" lineageId="4522" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4521"/>
+<outputColumn id="4525" name="Total $" description="" lineageId="4525" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4524"/>
+<outputColumn id="4528" name="Total_DiscountBaseValueCAD" description="" lineageId="4528" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4527"/>
+<outputColumn id="4531" name="Total_NavInsuranceFuelValueCAD" description="" lineageId="4531" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4530"/>
+<outputColumn id="4534" name="WS PNR" description="" lineageId="4534" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4533"/>
+<outputColumn id="4537" name="WS_CouponGuestCount" description="" lineageId="4537" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4536"/>
+<outputColumn id="4540" name="WS_FlightLegGuestCount" description="" lineageId="4540" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4539"/>
+<outputColumn id="4543" name="WS $" description="" lineageId="4543" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4542"/>
+<outputColumn id="4546" name="WS_DiscountBaseValueCAD" description="" lineageId="4546" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4545"/>
+<outputColumn id="4549" name="WS_NavInsuranceFuelValueCAD" description="" lineageId="4549" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4548"/>
+<outputColumn id="4552" name="Inet PNR" description="" lineageId="4552" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4551"/>
+<outputColumn id="4555" name="Inet_CouponGuestCount" description="" lineageId="4555" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4554"/>
+<outputColumn id="4558" name="Inet_FlightLegGuestCount" description="" lineageId="4558" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4557"/>
+<outputColumn id="4561" name="Inet $" description="" lineageId="4561" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4560"/>
+<outputColumn id="4564" name="Inet_DiscountBaseValueCAD" description="" lineageId="4564" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4563"/>
+<outputColumn id="4567" name="Inet_NavInsuranceFuelValueCAD" description="" lineageId="4567" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4566"/>
+<outputColumn id="4570" name="Inet 2 PNR" description="" lineageId="4570" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4569"/>
+<outputColumn id="4573" name="Inet 2 $" description="" lineageId="4573" precision="38" scale="2" length="0" dataType="numeric" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4572"/>
+<outputColumn id="4576" name="AM PNR" description="" lineageId="4576" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4575"/>
+<outputColumn id="4579" name="AM $" description="" lineageId="4579" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4578"/>
+<outputColumn id="4582" name="AM FS PNR" description="" lineageId="4582" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4581"/>
+<outputColumn id="4585" name="AM FS $" description="" lineageId="4585" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4584"/>
+<outputColumn id="4588" name="Sabre PNR" description="" lineageId="4588" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4587"/>
+<outputColumn id="4591" name="Sabre_CouponGuestCount" description="" lineageId="4591" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4590"/>
+<outputColumn id="4594" name="Sabre_FlightLegGuestCount" description="" lineageId="4594" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4593"/>
+<outputColumn id="4597" name="Sabre $" description="" lineageId="4597" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4596"/>
+<outputColumn id="4600" name="Sabre_DiscountBaseValueCAD" description="" lineageId="4600" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4599"/>
+<outputColumn id="4603" name="Sabre_NavInsuranceFuelValueCAD" description="" lineageId="4603" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4602"/>
+<outputColumn id="4606" name="Amadeus PNR" description="" lineageId="4606" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4605"/>
+<outputColumn id="4609" name="Amadeus_CouponGuestCount" description="" lineageId="4609" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4608"/>
+<outputColumn id="4612" name="Amadeus_FlightLegGuestCount" description="" lineageId="4612" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4611"/>
+<outputColumn id="4615" name="Amadeus $" description="" lineageId="4615" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4614"/>
+<outputColumn id="4618" name="Amadeus_DiscountBaseValueCAD" description="" lineageId="4618" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4617"/>
+<outputColumn id="4621" name="Amadeus_NavInsuranceFuelValueCAD" description="" lineageId="4621" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4620"/>
+<outputColumn id="4624" name="Galileo PNR" description="" lineageId="4624" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4623"/>
+<outputColumn id="4627" name="Galileo_CouponGuestCount" description="" lineageId="4627" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4626"/>
+<outputColumn id="4630" name="Galileo_FlightLegGuestCount" description="" lineageId="4630" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4629"/>
+<outputColumn id="4633" name="Galileo $" description="" lineageId="4633" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4632"/>
+<outputColumn id="4636" name="Galileo_DiscountBaseValueCAD" description="" lineageId="4636" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4635"/>
+<outputColumn id="4639" name="Galileo_NavInsuranceFuelValueCAD" description="" lineageId="4639" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4638"/>
+<outputColumn id="4642" name="Worldspan PNR" description="" lineageId="4642" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4641"/>
+<outputColumn id="4645" name="Worldspan_CouponGuestCount" description="" lineageId="4645" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4644"/>
+<outputColumn id="4648" name="Worldspan_FlightLegGuestCount" description="" lineageId="4648" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4647"/>
+<outputColumn id="4651" name="Worldspan $" description="" lineageId="4651" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4650"/>
+<outputColumn id="4654" name="Worldspan_DiscountBaseValueCAD" description="" lineageId="4654" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4653"/>
+<outputColumn id="4657" name="Worldspan_NavInsuranceFuelValueCAD" description="" lineageId="4657" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4656"/>
+<outputColumn id="4660" name="GDS PNR" description="" lineageId="4660" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4659"/>
+<outputColumn id="4663" name="GDS_CouponGuestCount" description="" lineageId="4663" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4662"/>
+<outputColumn id="4666" name="GDS_FlightLegGuestCount" description="" lineageId="4666" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4665"/>
+<outputColumn id="4669" name="GDS $" description="" lineageId="4669" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4668"/>
+<outputColumn id="4672" name="GDS_DiscountBaseValueCAD" description="" lineageId="4672" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4671"/>
+<outputColumn id="4675" name="GDS_NavInsuranceFuelValueCAD" description="" lineageId="4675" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4674"/>
+<outputColumn id="4678" name="BIZ_PNR" description="" lineageId="4678" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4677"/>
+<outputColumn id="4681" name="BIZ_CouponGuestCount" description="" lineageId="4681" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4680"/>
+<outputColumn id="4684" name="BIZ_FlightLegGuestCount" description="" lineageId="4684" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4683"/>
+<outputColumn id="4687" name="BIZ_$" description="" lineageId="4687" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4686"/>
+<outputColumn id="4690" name="BIZ_DiscountBaseValueCAD" description="" lineageId="4690" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4689"/>
+<outputColumn id="4693" name="BIZ_NavInsuranceFuelValueCAD" description="" lineageId="4693" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4692"/>
+<outputColumn id="4696" name="CurrencyCode" description="" lineageId="4696" precision="0" scale="0" length="3" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="Conversion" errorRowDisposition="FailComponent" truncationRowDisposition="FailComponent" externalMetadataColumnId="4695"/></outputColumns><externalMetadataColumns isUsed="True">
+<externalMetadataColumn id="3345" name="IATA" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4410" name="Year" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4413" name="Mon" description="" precision="0" scale="0" length="3" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4416" name="date" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="4419" name="CorporateProfileID" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4422" name="CID" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4425" name="Company_ID" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4428" name="Promo_Code" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4431" name="Company_Name" description="" precision="0" scale="0" length="255" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4434" name="Company_Address" description="" precision="0" scale="0" length="129" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4437" name="Company_City" description="" precision="0" scale="0" length="30" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4440" name="Company_Province" description="" precision="0" scale="0" length="2" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4443" name="Company_PostalCode" description="" precision="0" scale="0" length="16" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4446" name="Company_Phone" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4449" name="Company_EMail" description="" precision="0" scale="0" length="255" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4452" name="Acct_Type" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4455" name="At_Source_%" description="" precision="16" scale="2" length="0" dataType="numeric" codePage="0"/>
+<externalMetadataColumn id="4458" name="Tier_Name" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4461" name="Level" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4464" name="Matrix_Value" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4467" name="Trans_Indicator" description="" precision="0" scale="0" length="6" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4470" name="Agency Name" description="" precision="0" scale="0" length="75" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4473" name="Manager" description="" precision="0" scale="0" length="75" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4476" name="Address" description="" precision="0" scale="0" length="120" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4479" name="City" description="" precision="0" scale="0" length="75" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4482" name="Province" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4485" name="PostalCode_Zip" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4488" name="Phone" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4491" name="E-Mail" description="" precision="0" scale="0" length="120" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4494" name="ODPair" description="" precision="0" scale="0" length="6" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4497" name="ODSetNumber" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4500" name="Agreement_Type" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4506" name="MarketingCarrier" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4509" name="OperatingCarrier" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4512" name="TicketingCarrier" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4515" name="Total PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4518" name="Total_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4521" name="Total_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4524" name="Total $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4527" name="Total_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4530" name="Total_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4533" name="WS PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4536" name="WS_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4539" name="WS_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4542" name="WS $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4545" name="WS_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4548" name="WS_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4551" name="Inet PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4554" name="Inet_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4557" name="Inet_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4560" name="Inet $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4563" name="Inet_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4566" name="Inet_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4569" name="Inet 2 PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4572" name="Inet 2 $" description="" precision="38" scale="2" length="0" dataType="numeric" codePage="0"/>
+<externalMetadataColumn id="4575" name="AM PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4578" name="AM $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4581" name="AM FS PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4584" name="AM FS $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4587" name="Sabre PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4590" name="Sabre_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4593" name="Sabre_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4596" name="Sabre $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4599" name="Sabre_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4602" name="Sabre_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4605" name="Amadeus PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4608" name="Amadeus_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4611" name="Amadeus_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4614" name="Amadeus $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4617" name="Amadeus_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4620" name="Amadeus_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4623" name="Galileo PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4626" name="Galileo_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4629" name="Galileo_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4632" name="Galileo $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4635" name="Galileo_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4638" name="Galileo_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4641" name="Worldspan PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4644" name="Worldspan_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4647" name="Worldspan_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4650" name="Worldspan $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4653" name="Worldspan_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4656" name="Worldspan_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4659" name="GDS PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4662" name="GDS_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4665" name="GDS_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4668" name="GDS $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4671" name="GDS_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4674" name="GDS_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4677" name="BIZ_PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4680" name="BIZ_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4683" name="BIZ_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4686" name="BIZ_$" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4689" name="BIZ_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4692" name="BIZ_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4695" name="CurrencyCode" description="" precision="0" scale="0" length="3" dataType="str" codePage="1252"/></externalMetadataColumns></output>
+<output id="12" name="OLE DB Source Error Output" description="" exclusionGroup="0" synchronousInputId="0" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="true" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="4412" name="Year" description="" lineageId="4412" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4415" name="Mon" description="" lineageId="4415" precision="0" scale="0" length="3" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4418" name="date" description="" lineageId="4418" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="3347" name="IATA" description="" lineageId="3347" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4421" name="CorporateProfileID" description="" lineageId="4421" precision="0" scale="0" length="20" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4424" name="CID" description="" lineageId="4424" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4427" name="Company_ID" description="" lineageId="4427" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4430" name="Promo_Code" description="" lineageId="4430" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4433" name="Company_Name" description="" lineageId="4433" precision="0" scale="0" length="255" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4436" name="Company_Address" description="" lineageId="4436" precision="0" scale="0" length="129" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4439" name="Company_City" description="" lineageId="4439" precision="0" scale="0" length="30" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4442" name="Company_Province" description="" lineageId="4442" precision="0" scale="0" length="2" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4445" name="Company_PostalCode" description="" lineageId="4445" precision="0" scale="0" length="16" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4448" name="Company_Phone" description="" lineageId="4448" precision="0" scale="0" length="20" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4451" name="Company_EMail" description="" lineageId="4451" precision="0" scale="0" length="255" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4454" name="Acct_Type" description="" lineageId="4454" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4457" name="At_Source_%" description="" lineageId="4457" precision="16" scale="2" length="0" dataType="numeric" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4460" name="Tier_Name" description="" lineageId="4460" precision="0" scale="0" length="50" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4463" name="Level" description="" lineageId="4463" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4466" name="Matrix_Value" description="" lineageId="4466" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4469" name="Trans_Indicator" description="" lineageId="4469" precision="0" scale="0" length="6" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4472" name="Agency Name" description="" lineageId="4472" precision="0" scale="0" length="75" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4475" name="Manager" description="" lineageId="4475" precision="0" scale="0" length="75" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4478" name="Address" description="" lineageId="4478" precision="0" scale="0" length="120" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4481" name="City" description="" lineageId="4481" precision="0" scale="0" length="75" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4484" name="Province" description="" lineageId="4484" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4487" name="PostalCode_Zip" description="" lineageId="4487" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4490" name="Phone" description="" lineageId="4490" precision="0" scale="0" length="25" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4493" name="E-Mail" description="" lineageId="4493" precision="0" scale="0" length="120" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4496" name="ODPair" description="" lineageId="4496" precision="0" scale="0" length="6" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4499" name="ODSetNumber" description="" lineageId="4499" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4502" name="Agreement_Type" description="" lineageId="4502" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4508" name="MarketingCarrier" description="" lineageId="4508" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4511" name="OperatingCarrier" description="" lineageId="4511" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4514" name="TicketingCarrier" description="" lineageId="4514" precision="0" scale="0" length="10" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4517" name="Total PNR" description="" lineageId="4517" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4520" name="Total_CouponGuestCount" description="" lineageId="4520" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4523" name="Total_FlightLegGuestCount" description="" lineageId="4523" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4526" name="Total $" description="" lineageId="4526" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4529" name="Total_DiscountBaseValueCAD" description="" lineageId="4529" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4532" name="Total_NavInsuranceFuelValueCAD" description="" lineageId="4532" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4535" name="WS PNR" description="" lineageId="4535" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4538" name="WS_CouponGuestCount" description="" lineageId="4538" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4541" name="WS_FlightLegGuestCount" description="" lineageId="4541" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4544" name="WS $" description="" lineageId="4544" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4547" name="WS_DiscountBaseValueCAD" description="" lineageId="4547" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4550" name="WS_NavInsuranceFuelValueCAD" description="" lineageId="4550" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4553" name="Inet PNR" description="" lineageId="4553" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4556" name="Inet_CouponGuestCount" description="" lineageId="4556" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4559" name="Inet_FlightLegGuestCount" description="" lineageId="4559" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4562" name="Inet $" description="" lineageId="4562" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4565" name="Inet_DiscountBaseValueCAD" description="" lineageId="4565" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4568" name="Inet_NavInsuranceFuelValueCAD" description="" lineageId="4568" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4571" name="Inet 2 PNR" description="" lineageId="4571" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4574" name="Inet 2 $" description="" lineageId="4574" precision="38" scale="2" length="0" dataType="numeric" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4577" name="AM PNR" description="" lineageId="4577" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4580" name="AM $" description="" lineageId="4580" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4583" name="AM FS PNR" description="" lineageId="4583" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4586" name="AM FS $" description="" lineageId="4586" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4589" name="Sabre PNR" description="" lineageId="4589" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4592" name="Sabre_CouponGuestCount" description="" lineageId="4592" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4595" name="Sabre_FlightLegGuestCount" description="" lineageId="4595" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4598" name="Sabre $" description="" lineageId="4598" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4601" name="Sabre_DiscountBaseValueCAD" description="" lineageId="4601" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4604" name="Sabre_NavInsuranceFuelValueCAD" description="" lineageId="4604" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4607" name="Amadeus PNR" description="" lineageId="4607" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4610" name="Amadeus_CouponGuestCount" description="" lineageId="4610" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4613" name="Amadeus_FlightLegGuestCount" description="" lineageId="4613" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4616" name="Amadeus $" description="" lineageId="4616" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4619" name="Amadeus_DiscountBaseValueCAD" description="" lineageId="4619" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4622" name="Amadeus_NavInsuranceFuelValueCAD" description="" lineageId="4622" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4625" name="Galileo PNR" description="" lineageId="4625" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4628" name="Galileo_CouponGuestCount" description="" lineageId="4628" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4631" name="Galileo_FlightLegGuestCount" description="" lineageId="4631" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4634" name="Galileo $" description="" lineageId="4634" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4637" name="Galileo_DiscountBaseValueCAD" description="" lineageId="4637" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4640" name="Galileo_NavInsuranceFuelValueCAD" description="" lineageId="4640" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4643" name="Worldspan PNR" description="" lineageId="4643" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4646" name="Worldspan_CouponGuestCount" description="" lineageId="4646" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4649" name="Worldspan_FlightLegGuestCount" description="" lineageId="4649" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4652" name="Worldspan $" description="" lineageId="4652" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4655" name="Worldspan_DiscountBaseValueCAD" description="" lineageId="4655" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4658" name="Worldspan_NavInsuranceFuelValueCAD" description="" lineageId="4658" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4661" name="GDS PNR" description="" lineageId="4661" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4664" name="GDS_CouponGuestCount" description="" lineageId="4664" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4667" name="GDS_FlightLegGuestCount" description="" lineageId="4667" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4670" name="GDS $" description="" lineageId="4670" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4673" name="GDS_DiscountBaseValueCAD" description="" lineageId="4673" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4676" name="GDS_NavInsuranceFuelValueCAD" description="" lineageId="4676" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4679" name="BIZ_PNR" description="" lineageId="4679" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4682" name="BIZ_CouponGuestCount" description="" lineageId="4682" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4685" name="BIZ_FlightLegGuestCount" description="" lineageId="4685" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4688" name="BIZ_$" description="" lineageId="4688" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4691" name="BIZ_DiscountBaseValueCAD" description="" lineageId="4691" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4694" name="BIZ_NavInsuranceFuelValueCAD" description="" lineageId="4694" precision="0" scale="0" length="0" dataType="cy" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="4697" name="CurrencyCode" description="" lineageId="4697" precision="0" scale="0" length="3" dataType="str" codePage="1252" sortKeyPosition="0" comparisonFlags="0" specialFlags="0" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="13" name="ErrorCode" description="" lineageId="13" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="1" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="14" name="ErrorColumn" description="" lineageId="14" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="2" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/></outputColumns><externalMetadataColumns isUsed="False"/></output>
+</outputs>
+</component>
+<component id="430" name="Non-Fare_Class_Unfiltered TBL" componentClassID="{E2568105-9550-4F71-A638-B7FE42E66922}" description="OLE DB Destination" localeId="-1" usesDispositions="true" validateExternalMetadata="True" version="4" pipelineVersion="0" contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+<properties>
+<property id="431" name="CommandTimeout" dataType="System.Int32" state="default" isArray="false" description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">0</property>
+<property id="432" name="OpenRowset" dataType="System.String" state="default" isArray="false" description="Specifies the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">[dbo].[Non-Fare_Class_UnFiltered]</property>
+<property id="433" name="OpenRowsetVariable" dataType="System.String" state="default" isArray="false" description="Specifies the variable that contains the name of the database object used to open a rowset." typeConverter="" UITypeEditor="" containsID="false" expressionType="None"></property>
+<property id="434" name="SqlCommand" dataType="System.String" state="default" isArray="false" description="The SQL command to be executed." typeConverter="" UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" containsID="false" expressionType="None"></property>
+<property id="435" name="DefaultCodePage" dataType="System.Int32" state="default" isArray="false" description="Specifies the column code page to use when code page information is unavailable from the data source." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">1252</property>
+<property id="436" name="AlwaysUseDefaultCodePage" dataType="System.Boolean" state="default" isArray="false" description="Forces the use of the DefaultCodePage property value when describing character data." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="437" name="AccessMode" dataType="System.Int32" state="default" isArray="false" description="Specifies the mode used to access the database." typeConverter="AccessMode" UITypeEditor="" containsID="false" expressionType="None">3</property>
+<property id="439" name="FastLoadKeepIdentity" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="440" name="FastLoadKeepNulls" dataType="System.Boolean" state="default" isArray="false" description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">false</property>
+<property id="441" name="FastLoadOptions" dataType="System.String" state="default" isArray="false" description="Specifies options to be used with fast load.  Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">TABLOCK,CHECK_CONSTRAINTS</property>
+<property id="442" name="FastLoadMaxInsertCommitSize" dataType="System.Int32" state="default" isArray="false" description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on." typeConverter="" UITypeEditor="" containsID="false" expressionType="None">0</property></properties>
+<connections>
+<connection id="438" name="OleDbConnection" description="The OLE DB runtime connection used to access the database." connectionManagerID="{537FB54F-6F23-4E60-9A89-33856AFE413C}"/></connections>
+<inputs>
+<input id="443" name="OLE DB Destination Input" description="" hasSideEffects="true" dangling="false" errorOrTruncationOperation="Insert" errorRowDisposition="FailComponent" truncationRowDisposition="NotUsed"><inputColumns>
+<inputColumn id="4883" name="" description="" lineageId="3346" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4789"/>
+<inputColumn id="4884" name="" description="" lineageId="4411" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4786"/>
+<inputColumn id="4885" name="" description="" lineageId="4414" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4787"/>
+<inputColumn id="4886" name="" description="" lineageId="4417" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4788"/>
+<inputColumn id="4887" name="" description="" lineageId="4420" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4790"/>
+<inputColumn id="4888" name="" description="" lineageId="4423" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4791"/>
+<inputColumn id="4889" name="" description="" lineageId="4426" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4792"/>
+<inputColumn id="4890" name="" description="" lineageId="4429" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4793"/>
+<inputColumn id="4891" name="" description="" lineageId="4432" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4794"/>
+<inputColumn id="4892" name="" description="" lineageId="4435" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4795"/>
+<inputColumn id="4893" name="" description="" lineageId="4438" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4796"/>
+<inputColumn id="4894" name="" description="" lineageId="4441" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4797"/>
+<inputColumn id="4895" name="" description="" lineageId="4444" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4798"/>
+<inputColumn id="4896" name="" description="" lineageId="4447" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4799"/>
+<inputColumn id="4897" name="" description="" lineageId="4450" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4800"/>
+<inputColumn id="4898" name="" description="" lineageId="4453" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4801"/>
+<inputColumn id="4899" name="" description="" lineageId="4456" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4802"/>
+<inputColumn id="4900" name="" description="" lineageId="4459" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4803"/>
+<inputColumn id="4901" name="" description="" lineageId="4462" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4804"/>
+<inputColumn id="4902" name="" description="" lineageId="4465" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4805"/>
+<inputColumn id="4903" name="" description="" lineageId="4468" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4806"/>
+<inputColumn id="4904" name="" description="" lineageId="4471" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4807"/>
+<inputColumn id="4905" name="" description="" lineageId="4474" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4808"/>
+<inputColumn id="4906" name="" description="" lineageId="4477" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4809"/>
+<inputColumn id="4907" name="" description="" lineageId="4480" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4810"/>
+<inputColumn id="4908" name="" description="" lineageId="4483" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4811"/>
+<inputColumn id="4909" name="" description="" lineageId="4486" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4812"/>
+<inputColumn id="4910" name="" description="" lineageId="4489" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4813"/>
+<inputColumn id="4911" name="" description="" lineageId="4492" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4814"/>
+<inputColumn id="4912" name="" description="" lineageId="4495" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4815"/>
+<inputColumn id="4913" name="" description="" lineageId="4498" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4816"/>
+<inputColumn id="4914" name="" description="" lineageId="4501" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4817"/>
+<inputColumn id="4916" name="" description="" lineageId="4507" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4819"/>
+<inputColumn id="4917" name="" description="" lineageId="4510" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4820"/>
+<inputColumn id="4918" name="" description="" lineageId="4513" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4821"/>
+<inputColumn id="4919" name="" description="" lineageId="4516" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4822"/>
+<inputColumn id="4920" name="" description="" lineageId="4519" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4823"/>
+<inputColumn id="4921" name="" description="" lineageId="4522" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4824"/>
+<inputColumn id="4922" name="" description="" lineageId="4525" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4825"/>
+<inputColumn id="4923" name="" description="" lineageId="4528" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4826"/>
+<inputColumn id="4924" name="" description="" lineageId="4531" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4827"/>
+<inputColumn id="4925" name="" description="" lineageId="4534" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4828"/>
+<inputColumn id="4926" name="" description="" lineageId="4537" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4829"/>
+<inputColumn id="4927" name="" description="" lineageId="4540" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4830"/>
+<inputColumn id="4928" name="" description="" lineageId="4543" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4831"/>
+<inputColumn id="4929" name="" description="" lineageId="4546" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4832"/>
+<inputColumn id="4930" name="" description="" lineageId="4549" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4833"/>
+<inputColumn id="4931" name="" description="" lineageId="4552" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4834"/>
+<inputColumn id="4932" name="" description="" lineageId="4555" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4835"/>
+<inputColumn id="4933" name="" description="" lineageId="4558" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4836"/>
+<inputColumn id="4934" name="" description="" lineageId="4561" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4837"/>
+<inputColumn id="4935" name="" description="" lineageId="4564" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4838"/>
+<inputColumn id="4936" name="" description="" lineageId="4567" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4839"/>
+<inputColumn id="4937" name="" description="" lineageId="4570" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4840"/>
+<inputColumn id="4938" name="" description="" lineageId="4573" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4841"/>
+<inputColumn id="4939" name="" description="" lineageId="4576" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4842"/>
+<inputColumn id="4940" name="" description="" lineageId="4579" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4843"/>
+<inputColumn id="4941" name="" description="" lineageId="4582" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4844"/>
+<inputColumn id="4942" name="" description="" lineageId="4585" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4845"/>
+<inputColumn id="4943" name="" description="" lineageId="4588" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4846"/>
+<inputColumn id="4944" name="" description="" lineageId="4591" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4847"/>
+<inputColumn id="4945" name="" description="" lineageId="4594" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4848"/>
+<inputColumn id="4946" name="" description="" lineageId="4597" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4849"/>
+<inputColumn id="4947" name="" description="" lineageId="4600" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4850"/>
+<inputColumn id="4948" name="" description="" lineageId="4603" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4851"/>
+<inputColumn id="4949" name="" description="" lineageId="4606" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4852"/>
+<inputColumn id="4950" name="" description="" lineageId="4609" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4853"/>
+<inputColumn id="4951" name="" description="" lineageId="4612" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4854"/>
+<inputColumn id="4952" name="" description="" lineageId="4615" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4855"/>
+<inputColumn id="4953" name="" description="" lineageId="4618" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4856"/>
+<inputColumn id="4954" name="" description="" lineageId="4621" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4857"/>
+<inputColumn id="4955" name="" description="" lineageId="4624" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4858"/>
+<inputColumn id="4956" name="" description="" lineageId="4627" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4859"/>
+<inputColumn id="4957" name="" description="" lineageId="4630" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4860"/>
+<inputColumn id="4958" name="" description="" lineageId="4633" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4861"/>
+<inputColumn id="4959" name="" description="" lineageId="4636" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4862"/>
+<inputColumn id="4960" name="" description="" lineageId="4639" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4863"/>
+<inputColumn id="4961" name="" description="" lineageId="4642" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4864"/>
+<inputColumn id="4962" name="" description="" lineageId="4645" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4865"/>
+<inputColumn id="4963" name="" description="" lineageId="4648" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4866"/>
+<inputColumn id="4964" name="" description="" lineageId="4651" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4867"/>
+<inputColumn id="4965" name="" description="" lineageId="4654" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4868"/>
+<inputColumn id="4966" name="" description="" lineageId="4657" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4869"/>
+<inputColumn id="4967" name="" description="" lineageId="4660" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4870"/>
+<inputColumn id="4968" name="" description="" lineageId="4663" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4871"/>
+<inputColumn id="4969" name="" description="" lineageId="4666" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4872"/>
+<inputColumn id="4970" name="" description="" lineageId="4669" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4873"/>
+<inputColumn id="4971" name="" description="" lineageId="4672" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4874"/>
+<inputColumn id="4972" name="" description="" lineageId="4675" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4875"/>
+<inputColumn id="4973" name="" description="" lineageId="4678" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4876"/>
+<inputColumn id="4974" name="" description="" lineageId="4681" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4877"/>
+<inputColumn id="4975" name="" description="" lineageId="4684" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4878"/>
+<inputColumn id="4976" name="" description="" lineageId="4687" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4879"/>
+<inputColumn id="4977" name="" description="" lineageId="4690" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4880"/>
+<inputColumn id="4978" name="" description="" lineageId="4693" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4881"/>
+<inputColumn id="4979" name="" description="" lineageId="4696" usageType="readOnly" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="4882"/>
+</inputColumns><externalMetadataColumns isUsed="True">
+<externalMetadataColumn id="4785" name="ID" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4786" name="Year" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4787" name="Mon" description="" precision="0" scale="0" length="3" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4788" name="Date" description="" precision="0" scale="0" length="0" dataType="dbTimeStamp" codePage="0"/>
+<externalMetadataColumn id="4789" name="IATA" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4790" name="CorporateProfileID" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4791" name="CID" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4792" name="Company_ID" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4793" name="Promo_code" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4794" name="Company_Name" description="" precision="0" scale="0" length="255" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4795" name="Company_Address" description="" precision="0" scale="0" length="129" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4796" name="Company_City" description="" precision="0" scale="0" length="30" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4797" name="Company_Province" description="" precision="0" scale="0" length="2" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4798" name="Company_PostalCode" description="" precision="0" scale="0" length="16" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4799" name="Company_Phone" description="" precision="0" scale="0" length="20" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4800" name="Company_EMail" description="" precision="0" scale="0" length="255" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4801" name="Acct_Type" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4802" name="At_Source_%" description="" precision="16" scale="2" length="0" dataType="numeric" codePage="0"/>
+<externalMetadataColumn id="4803" name="Tier_Name" description="" precision="0" scale="0" length="50" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4804" name="Level" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4805" name="Matrix_Value" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4806" name="Trans_Indicator" description="" precision="0" scale="0" length="6" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4807" name="Agency Name" description="" precision="0" scale="0" length="75" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4808" name="Manager" description="" precision="0" scale="0" length="75" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4809" name="Address" description="" precision="0" scale="0" length="120" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4810" name="City" description="" precision="0" scale="0" length="75" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4811" name="Province" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4812" name="PostalCode_Zip" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4813" name="Phone" description="" precision="0" scale="0" length="25" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4814" name="E-Mail" description="" precision="0" scale="0" length="120" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4815" name="ODPair" description="" precision="0" scale="0" length="6" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4816" name="ODSetNumber" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4817" name="Agreement_Type" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4819" name="MarketingCarrier" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4820" name="OperatingCarrier" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4821" name="TicketingCarrier" description="" precision="0" scale="0" length="10" dataType="str" codePage="1252"/>
+<externalMetadataColumn id="4822" name="Total PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4823" name="Total_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4824" name="Total_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4825" name="Total $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4826" name="Total_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4827" name="Total_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4828" name="WS PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4829" name="WS_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4830" name="WS_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4831" name="WS $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4832" name="WS_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4833" name="WS_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4834" name="Inet PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4835" name="Inet_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4836" name="Inet_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4837" name="Inet $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4838" name="Inet_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4839" name="Inet_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4840" name="Inet 2 PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4841" name="Inet 2 $" description="" precision="14" scale="2" length="0" dataType="numeric" codePage="0"/>
+<externalMetadataColumn id="4842" name="AM PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4843" name="AM $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4844" name="AM FS PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4845" name="AM FS $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4846" name="Sabre PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4847" name="Sabre_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4848" name="Sabre_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4849" name="Sabre $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4850" name="Sabre_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4851" name="Sabre_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4852" name="Amadeus PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4853" name="Amadeus_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4854" name="Amadeus_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4855" name="Amadeus $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4856" name="Amadeus_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4857" name="Amadeus_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4858" name="Galileo PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4859" name="Galileo_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4860" name="Galileo_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4861" name="Galileo $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4862" name="Galileo_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4863" name="Galileo_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4864" name="Worldspan PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4865" name="Worldspan_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4866" name="Worldspan_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4867" name="Worldspan $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4868" name="Worldspan_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4869" name="Worldspan_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4870" name="GDS PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4871" name="GDS_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4872" name="GDS_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4873" name="GDS $" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4874" name="GDS_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4875" name="GDS_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4876" name="BIZ_PNR" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4877" name="BIZ_CouponGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4878" name="BIZ_FlightLegGuestCount" description="" precision="0" scale="0" length="0" dataType="i4" codePage="0"/>
+<externalMetadataColumn id="4879" name="BIZ_$" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4880" name="BIZ_DiscountBaseValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4881" name="BIZ_NavInsuranceFuelValueCAD" description="" precision="0" scale="0" length="0" dataType="cy" codePage="0"/>
+<externalMetadataColumn id="4882" name="CurrencyCode" description="" precision="0" scale="0" length="3" dataType="str" codePage="1252"/></externalMetadataColumns></input>
+</inputs>
+<outputs>
+<output id="444" name="OLE DB Destination Error Output" description="" exclusionGroup="1" synchronousInputId="443" deleteOutputOnPathDetached="false" hasSideEffects="false" dangling="false" isErrorOut="true" isSorted="false" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed"><outputColumns>
+<outputColumn id="445" name="ErrorCode" description="" lineageId="445" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="1" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/>
+<outputColumn id="446" name="ErrorColumn" description="" lineageId="446" precision="0" scale="0" length="0" dataType="i4" codePage="0" sortKeyPosition="0" comparisonFlags="0" specialFlags="2" errorOrTruncationOperation="" errorRowDisposition="NotUsed" truncationRowDisposition="NotUsed" externalMetadataColumnId="0"/></outputColumns><externalMetadataColumns isUsed="False"/></output>
+</outputs>
+</component>
+</components>
+<paths>
+<path id="4698" name="OLE DB Source Output" description="" startId="11" endId="443"/>
+</paths></pipeline></DTS:ObjectData></DTS:Executable>
+<DTS:PrecedenceConstraint><DTS:Property DTS:Name="Value">0</DTS:Property><DTS:Property DTS:Name="EvalOp">2</DTS:Property><DTS:Property DTS:Name="LogicalAnd">-1</DTS:Property><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Executable IDREF="{83E7984B-5381-4726-9E8F-448E9A0B8274}" DTS:IsFrom="-1"/><DTS:Executable IDREF="{3E660943-2A26-437A-9FD5-FC272C3B69A9}" DTS:IsFrom="0"/><DTS:Property DTS:Name="ObjectName">Constraint 3</DTS:Property><DTS:Property DTS:Name="DTSID">{F9EA880A-2395-496B-B07D-927AE9FA5577}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PrecedenceConstraint><DTS:Property DTS:Name="ObjectName">Sequence Container</DTS:Property><DTS:Property DTS:Name="DTSID">{EB02D2A6-13B0-4AB4-BE28-0380DCD53B86}</DTS:Property><DTS:Property DTS:Name="Description">Sequence Container</DTS:Property><DTS:Property DTS:Name="CreationName">STOCK:SEQUENCE</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property></DTS:Executable>
+<DTS:Executable DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" DTS:ThreadHint="0"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Send Mail Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">0</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:PropertyExpression DTS:Name="ToLine">@[User::EmailTo]</DTS:PropertyExpression><DTS:Property DTS:Name="ObjectName">Success</DTS:Property><DTS:Property DTS:Name="DTSID">{6ce0125d-fb15-408e-a1ae-d77c942de4a6}</DTS:Property><DTS:Property DTS:Name="Description">Send Mail Task</DTS:Property><DTS:Property DTS:Name="CreationName">Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><SendMailTask:SendMailTaskData SendMailTask:SMTPServer="{b44ad321-854c-4a88-9b08-a710e6be60ae}" SendMailTask:From="jwallace@westjet.com" SendMailTask:To="jwallace@westjet.com" SendMailTask:CC="" SendMailTask:BCC="" SendMailTask:Subject="Non_Fare_Class_Unfiltered loaded successfully" SendMailTask:Priority="Normal" SendMailTask:MessageSourceType="DirectInput" SendMailTask:MessageSource="" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask"/></DTS:ObjectData></DTS:Executable>
+<DTS:Executable DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" DTS:ThreadHint="1"><DTS:Property DTS:Name="ExecutionLocation">0</DTS:Property><DTS:Property DTS:Name="ExecutionAddress"></DTS:Property><DTS:Property DTS:Name="TaskContact">Send Mail Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1</DTS:Property><DTS:Property DTS:Name="ForceExecValue">0</DTS:Property><DTS:Property DTS:Name="ExecValue" DTS:DataType="3">0</DTS:Property><DTS:Property DTS:Name="ForceExecutionResult">-1</DTS:Property><DTS:Property DTS:Name="Disabled">0</DTS:Property><DTS:Property DTS:Name="FailPackageOnFailure">0</DTS:Property><DTS:Property DTS:Name="FailParentOnFailure">0</DTS:Property><DTS:Property DTS:Name="MaxErrorCount">1</DTS:Property><DTS:Property DTS:Name="ISOLevel">1048576</DTS:Property><DTS:Property DTS:Name="LocaleID">-1</DTS:Property><DTS:Property DTS:Name="TransactionOption">1</DTS:Property><DTS:Property DTS:Name="DelayValidation">0</DTS:Property>
+<DTS:LoggingOptions><DTS:Property DTS:Name="LoggingMode">0</DTS:Property><DTS:Property DTS:Name="FilterKind">0</DTS:Property><DTS:Property DTS:Name="EventFilter" DTS:DataType="8"></DTS:Property></DTS:LoggingOptions><DTS:PropertyExpression DTS:Name="ToLine">@[User::EmailTo]</DTS:PropertyExpression><DTS:Property DTS:Name="ObjectName">Failure</DTS:Property><DTS:Property DTS:Name="DTSID">{ba4beb6f-ca15-427e-859b-984ffb4055c8}</DTS:Property><DTS:Property DTS:Name="Description">Send Mail Task</DTS:Property><DTS:Property DTS:Name="CreationName">Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask, Microsoft.SqlServer.SendMailTask, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property><DTS:ObjectData><SendMailTask:SendMailTaskData SendMailTask:SMTPServer="{b44ad321-854c-4a88-9b08-a710e6be60ae}" SendMailTask:From="jwallace@westjet.com" SendMailTask:To="jwallace@westjet.com" SendMailTask:CC="" SendMailTask:BCC="" SendMailTask:Subject="ERROR ** Failure to Load Non_Fare_Class_Unfiltered" SendMailTask:Priority="Normal" SendMailTask:MessageSourceType="DirectInput" SendMailTask:MessageSource="" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask"/></DTS:ObjectData></DTS:Executable>
+<DTS:PrecedenceConstraint><DTS:Property DTS:Name="Value">1</DTS:Property><DTS:Property DTS:Name="EvalOp">2</DTS:Property><DTS:Property DTS:Name="LogicalAnd">-1</DTS:Property><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Executable IDREF="{EB02D2A6-13B0-4AB4-BE28-0380DCD53B86}" DTS:IsFrom="-1"/><DTS:Executable IDREF="{ba4beb6f-ca15-427e-859b-984ffb4055c8}" DTS:IsFrom="0"/><DTS:Property DTS:Name="ObjectName">Constraint 1</DTS:Property><DTS:Property DTS:Name="DTSID">{D9F4FA81-CADC-4F5E-821B-8FB2F13F0E40}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PrecedenceConstraint>
+<DTS:PrecedenceConstraint><DTS:Property DTS:Name="Value">0</DTS:Property><DTS:Property DTS:Name="EvalOp">2</DTS:Property><DTS:Property DTS:Name="LogicalAnd">-1</DTS:Property><DTS:Property DTS:Name="Expression"></DTS:Property><DTS:Executable IDREF="{EB02D2A6-13B0-4AB4-BE28-0380DCD53B86}" DTS:IsFrom="-1"/><DTS:Executable IDREF="{6ce0125d-fb15-408e-a1ae-d77c942de4a6}" DTS:IsFrom="0"/><DTS:Property DTS:Name="ObjectName">Constraint</DTS:Property><DTS:Property DTS:Name="DTSID">{55890989-AC3B-45D0-8574-AA1B45E11DAF}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName"></DTS:Property></DTS:PrecedenceConstraint><DTS:Property DTS:Name="ObjectName">Load_Non_FareClassFiles</DTS:Property><DTS:Property DTS:Name="DTSID">{97B701F2-B7CF-429E-BC70-138EEE8B8730}</DTS:Property><DTS:Property DTS:Name="Description"></DTS:Property><DTS:Property DTS:Name="CreationName">MSDTS.Package.1</DTS:Property><DTS:Property DTS:Name="DisableEventHandlers">0</DTS:Property></DTS:Executable>
